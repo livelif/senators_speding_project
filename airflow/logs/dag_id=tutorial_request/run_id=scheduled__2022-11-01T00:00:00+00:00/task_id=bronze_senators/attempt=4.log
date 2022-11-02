@@ -1,0 +1,89 @@
+[2022-11-02 15:19:08,224] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.bronze_senators scheduled__2022-11-01T00:00:00+00:00 [queued]>
+[2022-11-02 15:19:08,231] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.bronze_senators scheduled__2022-11-01T00:00:00+00:00 [queued]>
+[2022-11-02 15:19:08,232] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-02 15:19:08,233] {taskinstance.py:1357} INFO - Starting attempt 4 of 5
+[2022-11-02 15:19:08,234] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-02 15:19:08,242] {taskinstance.py:1377} INFO - Executing <Task(HttpSensor): bronze_senators> on 2022-11-01 00:00:00+00:00
+[2022-11-02 15:19:08,247] {standard_task_runner.py:52} INFO - Started process 552 to run task
+[2022-11-02 15:19:08,250] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_request', 'bronze_senators', 'scheduled__2022-11-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmp9awh9gln', '--error-file', '/tmp/tmpbyg5vbhb']
+[2022-11-02 15:19:08,252] {standard_task_runner.py:80} INFO - Job 6: Subtask bronze_senators
+[2022-11-02 15:19:08,306] {task_command.py:370} INFO - Running <TaskInstance: tutorial_request.bronze_senators scheduled__2022-11-01T00:00:00+00:00 [running]> on host f1a7bb9214cc
+[2022-11-02 15:19:08,359] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_request
+AIRFLOW_CTX_TASK_ID=bronze_senators
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-01T00:00:00+00:00
+[2022-11-02 15:19:08,362] {http.py:97} INFO - Poking: /extract/senators
+[2022-11-02 15:19:08,373] {base.py:68} INFO - Using connection ID 'request_lakehouse' for task execution.
+[2022-11-02 15:19:08,376] {http.py:129} INFO - Sending 'GET' to url: http://host.docker.internal:6000/extract/senators
+[2022-11-02 15:19:08,387] {http.py:187} WARNING - ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) Tenacity will retry to execute the operation
+[2022-11-02 15:19:08,388] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 288, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 450, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 786, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 288, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 277, in execute
+    poke_return = self.poke(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/sensors/http.py", line 103, in poke
+    extra_options=self.extra_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 130, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 188, in run_and_check
+    raise ex
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 180, in run_and_check
+    response = session.send(prepped_request, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2022-11-02 15:19:08,404] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=tutorial_request, task_id=bronze_senators, execution_date=20221101T000000, start_date=20221102T151908, end_date=20221102T151908
+[2022-11-02 15:19:08,412] {standard_task_runner.py:97} ERROR - Failed to execute job 6 for task bronze_senators (('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')); 552)
+[2022-11-02 15:19:08,463] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-11-02 15:19:08,497] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

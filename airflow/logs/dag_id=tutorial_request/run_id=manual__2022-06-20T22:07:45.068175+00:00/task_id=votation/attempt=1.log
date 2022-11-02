@@ -1,0 +1,104 @@
+[2022-06-20 22:07:49,817] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.votation manual__2022-06-20T22:07:45.068175+00:00 [queued]>
+[2022-06-20 22:07:49,829] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.votation manual__2022-06-20T22:07:45.068175+00:00 [queued]>
+[2022-06-20 22:07:49,830] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 22:07:49,832] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-20 22:07:49,833] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 22:07:49,852] {taskinstance.py:1377} INFO - Executing <Task(Votation): votation> on 2022-06-20 22:07:45.068175+00:00
+[2022-06-20 22:07:49,858] {standard_task_runner.py:52} INFO - Started process 851 to run task
+[2022-06-20 22:07:49,862] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_request', 'votation', 'manual__2022-06-20T22:07:45.068175+00:00', '--job-id', '88', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmp9kugz_f5', '--error-file', '/tmp/tmppn53a6lv']
+[2022-06-20 22:07:49,871] {standard_task_runner.py:80} INFO - Job 88: Subtask votation
+[2022-06-20 22:07:49,960] {task_command.py:370} INFO - Running <TaskInstance: tutorial_request.votation manual__2022-06-20T22:07:45.068175+00:00 [running]> on host 4fac23c61f86
+[2022-06-20 22:07:50,055] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_request
+AIRFLOW_CTX_TASK_ID=votation
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T22:07:45.068175+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-20T22:07:45.068175+00:00
+[2022-06-20 22:07:50,065] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/4981/votacoes  codigo:  4981
+[2022-06-20 22:07:56,104] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5982/votacoes  codigo:  5982
+[2022-06-20 22:07:58,912] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/4610/votacoes  codigo:  4610
+[2022-06-20 22:08:00,365] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/945/votacoes  codigo:  945
+[2022-06-20 22:08:07,652] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5967/votacoes  codigo:  5967
+[2022-06-20 22:08:10,995] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5936/votacoes  codigo:  5936
+[2022-06-20 22:08:12,816] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5990/votacoes  codigo:  5990
+[2022-06-20 22:08:15,624] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/470/votacoes  codigo:  470
+[2022-06-20 22:08:18,182] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5973/votacoes  codigo:  5973
+[2022-06-20 22:08:20,954] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/475/votacoes  codigo:  475
+[2022-06-20 22:08:23,302] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5998/votacoes  codigo:  5998
+[2022-06-20 22:08:26,050] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/3830/votacoes  codigo:  3830
+[2022-06-20 22:08:29,738] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5906/votacoes  codigo:  5906
+[2022-06-20 22:08:31,035] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5537/votacoes  codigo:  5537
+[2022-06-20 22:08:35,052] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/4994/votacoes  codigo:  4994
+[2022-06-20 22:08:39,102] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5976/votacoes  codigo:  5976
+[2022-06-20 22:08:42,032] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/3777/votacoes  codigo:  3777
+[2022-06-20 22:08:44,895] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5902/votacoes  codigo:  5902
+[2022-06-20 22:08:46,157] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5898/votacoes  codigo:  5898
+[2022-06-20 22:08:48,009] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5718/votacoes  codigo:  5718
+[2022-06-20 22:08:50,449] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5531/votacoes  codigo:  5531
+[2022-06-20 22:08:54,104] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/22/votacoes  codigo:  22
+[2022-06-20 22:08:57,632] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5953/votacoes  codigo:  5953
+[2022-06-20 22:09:00,196] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5740/votacoes  codigo:  5740
+[2022-06-20 22:09:01,724] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5540/votacoes  codigo:  5540
+[2022-06-20 22:09:05,716] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/4525/votacoes  codigo:  4525
+[2022-06-20 22:09:10,914] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/345/votacoes  codigo:  345
+[2022-06-20 22:09:16,180] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5894/votacoes  codigo:  5894
+[2022-06-20 22:09:18,294] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/6008/votacoes  codigo:  6008
+[2022-06-20 22:09:20,191] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5008/votacoes  codigo:  5008
+[2022-06-20 22:09:24,958] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5385/votacoes  codigo:  5385
+[2022-06-20 22:09:27,241] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/4770/votacoes  codigo:  4770
+[2022-06-20 22:09:30,116] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/35/votacoes  codigo:  35
+[2022-06-20 22:09:35,414] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/581/votacoes  codigo:  581
+[2022-06-20 22:09:37,977] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/4545/votacoes  codigo:  4545
+[2022-06-20 22:09:42,923] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5627/votacoes  codigo:  5627
+[2022-06-20 22:09:45,488] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5895/votacoes  codigo:  5895
+[2022-06-20 22:09:48,380] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5350/votacoes  codigo:  5350
+[2022-06-20 22:09:51,166] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/90/votacoes  codigo:  90
+[2022-06-20 22:09:54,953] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/1249/votacoes  codigo:  1249
+[2022-06-20 22:09:59,883] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5533/votacoes  codigo:  5533
+[2022-06-20 22:10:04,770] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5979/votacoes  codigo:  5979
+[2022-06-20 22:10:07,474] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5926/votacoes  codigo:  5926
+[2022-06-20 22:10:10,216] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/1186/votacoes  codigo:  1186
+[2022-06-20 22:10:12,940] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5585/votacoes  codigo:  5585
+[2022-06-20 22:10:15,811] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5557/votacoes  codigo:  5557
+[2022-06-20 22:10:18,664] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5376/votacoes  codigo:  5376
+[2022-06-20 22:10:21,336] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/742/votacoes  codigo:  742
+[2022-06-20 22:10:24,121] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5422/votacoes  codigo:  5422
+[2022-06-20 22:10:26,961] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5942/votacoes  codigo:  5942
+[2022-06-20 22:10:30,071] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/6304/votacoes  codigo:  6304
+[2022-06-20 22:10:32,247] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/1023/votacoes  codigo:  1023
+[2022-06-20 22:10:40,358] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/6027/votacoes  codigo:  6027
+[2022-06-20 22:10:42,690] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5985/votacoes  codigo:  5985
+[2022-06-20 22:10:45,162] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5281/votacoes  codigo:  5281
+[2022-06-20 22:10:47,195] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5525/votacoes  codigo:  5525
+[2022-06-20 22:10:51,044] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5924/votacoes  codigo:  5924
+[2022-06-20 22:10:53,121] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5523/votacoes  codigo:  5523
+[2022-06-20 22:10:57,635] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/825/votacoes  codigo:  825
+[2022-06-20 22:11:03,825] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/374/votacoes  codigo:  374
+[2022-06-20 22:11:07,965] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5502/votacoes  codigo:  5502
+[2022-06-20 22:11:10,758] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5913/votacoes  codigo:  5913
+[2022-06-20 22:11:11,924] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5012/votacoes  codigo:  5012
+[2022-06-20 22:11:16,665] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5236/votacoes  codigo:  5236
+[2022-06-20 22:11:20,983] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/677/votacoes  codigo:  677
+[2022-06-20 22:11:24,896] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5732/votacoes  codigo:  5732
+[2022-06-20 22:11:27,260] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5352/votacoes  codigo:  5352
+[2022-06-20 22:11:30,207] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5322/votacoes  codigo:  5322
+[2022-06-20 22:11:34,280] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/2331/votacoes  codigo:  2331
+[2022-06-20 22:11:37,826] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5527/votacoes  codigo:  5527
+[2022-06-20 22:11:41,901] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5988/votacoes  codigo:  5988
+[2022-06-20 22:11:45,039] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5959/votacoes  codigo:  5959
+[2022-06-20 22:11:47,706] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/4560/votacoes  codigo:  4560
+[2022-06-20 22:11:52,770] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/3396/votacoes  codigo:  3396
+[2022-06-20 22:11:58,288] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5535/votacoes  codigo:  5535
+[2022-06-20 22:12:02,420] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5899/votacoes  codigo:  5899
+[2022-06-20 22:12:05,363] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5748/votacoes  codigo:  5748
+[2022-06-20 22:12:07,870] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/1173/votacoes  codigo:  1173
+[2022-06-20 22:12:12,004] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5411/votacoes  codigo:  5411
+[2022-06-20 22:12:14,707] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/5783/votacoes  codigo:  5783
+[2022-06-20 22:12:17,458] {logging_mixin.py:115} INFO - URL:  https://legis.senado.leg.br/dadosabertos/senador/3806/votacoes  codigo:  3806
+[2022-06-20 22:12:23,081] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=tutorial_request, task_id=votation, execution_date=20220620T220745, start_date=20220620T220749, end_date=20220620T221223
+[2022-06-20 22:12:23,166] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-20 22:12:23,186] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

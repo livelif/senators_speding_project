@@ -1,0 +1,21 @@
+[2022-09-19 12:34:59,741] {processor.py:153} INFO - Started process (PID=40) to work on /opt/airflow/dags/hello.py
+[2022-09-19 12:34:59,743] {processor.py:641} INFO - Processing file /opt/airflow/dags/hello.py for tasks to queue
+[2022-09-19 12:34:59,744] {logging_mixin.py:115} INFO - [2022-09-19 12:34:59,744] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/hello.py
+[2022-09-19 12:34:59,782] {processor.py:651} INFO - DAG(s) dict_keys(['tutorial_request']) retrieved from /opt/airflow/dags/hello.py
+[2022-09-19 12:34:59,881] {logging_mixin.py:115} INFO - [2022-09-19 12:34:59,881] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-09-19 12:34:59,961] {logging_mixin.py:115} INFO - [2022-09-19 12:34:59,961] {dag.py:2931} INFO - Setting next_dagrun for tutorial_request to 2022-09-18T12:34:59.960944+00:00, run_after=2022-09-19T12:34:59.960944+00:00
+[2022-09-19 12:35:00,031] {processor.py:161} INFO - Processing /opt/airflow/dags/hello.py took 0.292 seconds
+[2022-09-19 12:35:30,878] {processor.py:153} INFO - Started process (PID=95) to work on /opt/airflow/dags/hello.py
+[2022-09-19 12:35:30,901] {processor.py:641} INFO - Processing file /opt/airflow/dags/hello.py for tasks to queue
+[2022-09-19 12:35:30,903] {logging_mixin.py:115} INFO - [2022-09-19 12:35:30,903] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/hello.py
+[2022-09-19 12:35:30,929] {processor.py:651} INFO - DAG(s) dict_keys(['tutorial_request']) retrieved from /opt/airflow/dags/hello.py
+[2022-09-19 12:35:31,058] {logging_mixin.py:115} INFO - [2022-09-19 12:35:31,058] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-09-19 12:35:31,105] {logging_mixin.py:115} INFO - [2022-09-19 12:35:31,105] {dag.py:2931} INFO - Setting next_dagrun for tutorial_request to 2022-09-19T12:34:59.960944+00:00, run_after=2022-09-20T12:34:59.960944+00:00
+[2022-09-19 12:35:31,127] {processor.py:161} INFO - Processing /opt/airflow/dags/hello.py took 0.253 seconds
+[2022-09-19 12:36:01,276] {processor.py:153} INFO - Started process (PID=156) to work on /opt/airflow/dags/hello.py
+[2022-09-19 12:36:01,283] {processor.py:641} INFO - Processing file /opt/airflow/dags/hello.py for tasks to queue
+[2022-09-19 12:36:01,286] {logging_mixin.py:115} INFO - [2022-09-19 12:36:01,286] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/hello.py
+[2022-09-19 12:36:01,358] {processor.py:651} INFO - DAG(s) dict_keys(['tutorial_request']) retrieved from /opt/airflow/dags/hello.py
+[2022-09-19 12:36:01,452] {logging_mixin.py:115} INFO - [2022-09-19 12:36:01,452] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-09-19 12:36:01,540] {logging_mixin.py:115} INFO - [2022-09-19 12:36:01,540] {dag.py:2931} INFO - Setting next_dagrun for tutorial_request to 2022-09-19T12:34:59.960944+00:00, run_after=2022-09-20T12:34:59.960944+00:00
+[2022-09-19 12:36:01,583] {processor.py:161} INFO - Processing /opt/airflow/dags/hello.py took 0.316 seconds

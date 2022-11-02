@@ -1,0 +1,29 @@
+[2022-06-20 13:50:49,201] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.print_date scheduled__2022-06-19T13:50:47.850324+00:00 [queued]>
+[2022-06-20 13:50:49,207] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.print_date scheduled__2022-06-19T13:50:47.850324+00:00 [queued]>
+[2022-06-20 13:50:49,208] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 13:50:49,209] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-20 13:50:49,210] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 13:50:49,218] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): print_date> on 2022-06-19 13:50:47.850324+00:00
+[2022-06-20 13:50:49,221] {standard_task_runner.py:52} INFO - Started process 77 to run task
+[2022-06-20 13:50:49,224] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_request', 'print_date', 'scheduled__2022-06-19T13:50:47.850324+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmp4g92u_xz', '--error-file', '/tmp/tmpiopye4q7']
+[2022-06-20 13:50:49,225] {standard_task_runner.py:80} INFO - Job 63: Subtask print_date
+[2022-06-20 13:50:49,263] {task_command.py:370} INFO - Running <TaskInstance: tutorial_request.print_date scheduled__2022-06-19T13:50:47.850324+00:00 [running]> on host c19de67e094a
+[2022-06-20 13:50:49,302] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_request
+AIRFLOW_CTX_TASK_ID=print_date
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-19T13:50:47.850324+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-19T13:50:47.850324+00:00
+[2022-06-20 13:50:49,304] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-20 13:50:49,306] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'date']
+[2022-06-20 13:50:49,314] {subprocess.py:85} INFO - Output:
+[2022-06-20 13:50:49,316] {subprocess.py:92} INFO - Mon Jun 20 13:50:49 UTC 2022
+[2022-06-20 13:50:49,317] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-06-20 13:50:49,336] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=tutorial_request, task_id=print_date, execution_date=20220619T135047, start_date=20220620T135049, end_date=20220620T135049
+[2022-06-20 13:50:49,357] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-20 13:50:49,378] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

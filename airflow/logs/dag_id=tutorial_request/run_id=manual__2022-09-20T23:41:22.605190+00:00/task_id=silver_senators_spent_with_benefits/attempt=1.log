@@ -1,0 +1,28 @@
+[2022-09-20 23:41:33,500] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.silver_senators_spent_with_benefits manual__2022-09-20T23:41:22.605190+00:00 [queued]>
+[2022-09-20 23:41:33,509] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.silver_senators_spent_with_benefits manual__2022-09-20T23:41:22.605190+00:00 [queued]>
+[2022-09-20 23:41:33,510] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-20 23:41:33,512] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-09-20 23:41:33,513] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-20 23:41:33,526] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): silver_senators_spent_with_benefits> on 2022-09-20 23:41:22.605190+00:00
+[2022-09-20 23:41:33,532] {standard_task_runner.py:52} INFO - Started process 435 to run task
+[2022-09-20 23:41:33,536] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_request', 'silver_senators_spent_with_benefits', 'manual__2022-09-20T23:41:22.605190+00:00', '--job-id', '150', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmpmdz95e88', '--error-file', '/tmp/tmp8vsz25gl']
+[2022-09-20 23:41:33,538] {standard_task_runner.py:80} INFO - Job 150: Subtask silver_senators_spent_with_benefits
+[2022-09-20 23:41:33,595] {task_command.py:370} INFO - Running <TaskInstance: tutorial_request.silver_senators_spent_with_benefits manual__2022-09-20T23:41:22.605190+00:00 [running]> on host 6e14261407f3
+[2022-09-20 23:41:33,656] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_request
+AIRFLOW_CTX_TASK_ID=silver_senators_spent_with_benefits
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-20T23:41:22.605190+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-20T23:41:22.605190+00:00
+[2022-09-20 23:41:33,658] {http.py:102} INFO - Calling HTTP method
+[2022-09-20 23:41:33,672] {base.py:68} INFO - Using connection ID 'request_lakehouse' for task execution.
+[2022-09-20 23:41:33,676] {http.py:129} INFO - Sending 'GET' to url: http://host.docker.internal:5000/gold/senators_spent_with_benefits
+[2022-09-20 23:41:35,770] {logging_mixin.py:115} INFO - RESPONSE <Response [200]>
+[2022-09-20 23:41:35,775] {hello.py:15} INFO - REQUEST SUCCESS
+[2022-09-20 23:41:35,824] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=tutorial_request, task_id=silver_senators_spent_with_benefits, execution_date=20220920T234122, start_date=20220920T234133, end_date=20220920T234135
+[2022-09-20 23:41:35,872] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-20 23:41:35,918] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

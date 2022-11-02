@@ -1,0 +1,28 @@
+[2022-11-02 18:25:11,702] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.silver_employee_per_senator manual__2022-11-02T18:24:57.386362+00:00 [queued]>
+[2022-11-02 18:25:11,714] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.silver_employee_per_senator manual__2022-11-02T18:24:57.386362+00:00 [queued]>
+[2022-11-02 18:25:11,715] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-02 18:25:11,717] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-11-02 18:25:11,720] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-02 18:25:11,731] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): silver_employee_per_senator> on 2022-11-02 18:24:57.386362+00:00
+[2022-11-02 18:25:11,737] {standard_task_runner.py:52} INFO - Started process 176 to run task
+[2022-11-02 18:25:11,743] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_request', 'silver_employee_per_senator', 'manual__2022-11-02T18:24:57.386362+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmprgux9er1', '--error-file', '/tmp/tmpsuhdkstx']
+[2022-11-02 18:25:11,745] {standard_task_runner.py:80} INFO - Job 35: Subtask silver_employee_per_senator
+[2022-11-02 18:25:11,834] {task_command.py:370} INFO - Running <TaskInstance: tutorial_request.silver_employee_per_senator manual__2022-11-02T18:24:57.386362+00:00 [running]> on host dc5857352665
+[2022-11-02 18:25:11,918] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_request
+AIRFLOW_CTX_TASK_ID=silver_employee_per_senator
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-02T18:24:57.386362+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-02T18:24:57.386362+00:00
+[2022-11-02 18:25:11,923] {http.py:102} INFO - Calling HTTP method
+[2022-11-02 18:25:11,942] {base.py:68} INFO - Using connection ID 'request_lakehouse' for task execution.
+[2022-11-02 18:25:11,946] {http.py:129} INFO - Sending 'GET' to url: http://host.docker.internal:80/gold/employee_per_senator
+[2022-11-02 18:25:14,374] {logging_mixin.py:115} INFO - RESPONSE <Response [200]>
+[2022-11-02 18:25:14,375] {hello.py:15} INFO - REQUEST SUCCESS
+[2022-11-02 18:25:14,406] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=tutorial_request, task_id=silver_employee_per_senator, execution_date=20221102T182457, start_date=20221102T182511, end_date=20221102T182514
+[2022-11-02 18:25:14,485] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-11-02 18:25:14,531] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

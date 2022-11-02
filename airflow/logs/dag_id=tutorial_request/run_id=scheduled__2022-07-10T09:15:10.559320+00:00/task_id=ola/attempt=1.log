@@ -1,0 +1,24 @@
+[2022-07-11 09:15:13,340] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.ola scheduled__2022-07-10T09:15:10.559320+00:00 [queued]>
+[2022-07-11 09:15:13,348] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.ola scheduled__2022-07-10T09:15:10.559320+00:00 [queued]>
+[2022-07-11 09:15:13,350] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-11 09:15:13,351] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-07-11 09:15:13,352] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-11 09:15:13,370] {taskinstance.py:1377} INFO - Executing <Task(Ola): ola> on 2022-07-10 09:15:10.559320+00:00
+[2022-07-11 09:15:13,378] {standard_task_runner.py:52} INFO - Started process 334 to run task
+[2022-07-11 09:15:13,381] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_request', 'ola', 'scheduled__2022-07-10T09:15:10.559320+00:00', '--job-id', '184', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmpf6f34w8u', '--error-file', '/tmp/tmp4nw05_iq']
+[2022-07-11 09:15:13,385] {standard_task_runner.py:80} INFO - Job 184: Subtask ola
+[2022-07-11 09:15:13,433] {task_command.py:370} INFO - Running <TaskInstance: tutorial_request.ola scheduled__2022-07-10T09:15:10.559320+00:00 [running]> on host 3b9da1961faf
+[2022-07-11 09:15:13,482] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_request
+AIRFLOW_CTX_TASK_ID=ola
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-10T09:15:10.559320+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-07-10T09:15:10.559320+00:00
+[2022-07-11 09:15:20,450] {logging_mixin.py:115} INFO - SPARK SESSION  <pyspark.sql.session.SparkSession object at 0xffff8bfa0610>
+[2022-07-11 09:15:20,622] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=tutorial_request, task_id=ola, execution_date=20220710T091510, start_date=20220711T091513, end_date=20220711T091520
+[2022-07-11 09:15:20,688] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-07-11 09:15:20,709] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

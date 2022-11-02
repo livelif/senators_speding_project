@@ -1,0 +1,28 @@
+[2022-11-02 18:25:00,758] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.silver_benefits manual__2022-11-02T18:24:57.386362+00:00 [queued]>
+[2022-11-02 18:25:00,768] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.silver_benefits manual__2022-11-02T18:24:57.386362+00:00 [queued]>
+[2022-11-02 18:25:00,768] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-02 18:25:00,777] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-11-02 18:25:00,777] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-02 18:25:00,789] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): silver_benefits> on 2022-11-02 18:24:57.386362+00:00
+[2022-11-02 18:25:00,797] {standard_task_runner.py:52} INFO - Started process 162 to run task
+[2022-11-02 18:25:00,801] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_request', 'silver_benefits', 'manual__2022-11-02T18:24:57.386362+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmpdxcytdv2', '--error-file', '/tmp/tmp0n0f4s2r']
+[2022-11-02 18:25:00,804] {standard_task_runner.py:80} INFO - Job 32: Subtask silver_benefits
+[2022-11-02 18:25:00,879] {task_command.py:370} INFO - Running <TaskInstance: tutorial_request.silver_benefits manual__2022-11-02T18:24:57.386362+00:00 [running]> on host dc5857352665
+[2022-11-02 18:25:01,052] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_request
+AIRFLOW_CTX_TASK_ID=silver_benefits
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-02T18:24:57.386362+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-02T18:24:57.386362+00:00
+[2022-11-02 18:25:01,054] {http.py:102} INFO - Calling HTTP method
+[2022-11-02 18:25:01,090] {base.py:68} INFO - Using connection ID 'request_lakehouse' for task execution.
+[2022-11-02 18:25:01,094] {http.py:129} INFO - Sending 'GET' to url: http://host.docker.internal:80/silver/benefits
+[2022-11-02 18:25:10,155] {logging_mixin.py:115} INFO - RESPONSE <Response [200]>
+[2022-11-02 18:25:10,157] {hello.py:15} INFO - REQUEST SUCCESS
+[2022-11-02 18:25:10,196] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=tutorial_request, task_id=silver_benefits, execution_date=20221102T182457, start_date=20221102T182500, end_date=20221102T182510
+[2022-11-02 18:25:10,250] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-11-02 18:25:10,285] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

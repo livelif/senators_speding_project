@@ -1,0 +1,24 @@
+[2022-06-20 21:51:43,312] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.sample-task manual__2022-06-20T21:51:39.822338+00:00 [queued]>
+[2022-06-20 21:51:43,318] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.sample-task manual__2022-06-20T21:51:39.822338+00:00 [queued]>
+[2022-06-20 21:51:43,319] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 21:51:43,320] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-20 21:51:43,322] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 21:51:43,329] {taskinstance.py:1377} INFO - Executing <Task(SenatorsOperator): sample-task> on 2022-06-20 21:51:39.822338+00:00
+[2022-06-20 21:51:43,334] {standard_task_runner.py:52} INFO - Started process 93 to run task
+[2022-06-20 21:51:43,336] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_request', 'sample-task', 'manual__2022-06-20T21:51:39.822338+00:00', '--job-id', '68', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmp8lyqkeyi', '--error-file', '/tmp/tmpzqrwu5vu']
+[2022-06-20 21:51:43,338] {standard_task_runner.py:80} INFO - Job 68: Subtask sample-task
+[2022-06-20 21:51:43,377] {task_command.py:370} INFO - Running <TaskInstance: tutorial_request.sample-task manual__2022-06-20T21:51:39.822338+00:00 [running]> on host 8ea7e370cb9f
+[2022-06-20 21:51:43,419] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_request
+AIRFLOW_CTX_TASK_ID=sample-task
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T21:51:39.822338+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-20T21:51:39.822338+00:00
+[2022-06-20 21:51:45,993] {logging_mixin.py:115} INFO - ['logs', 'dags', '***.cfg', 'plugins', 'webserver_config.py', '***-worker.pid']
+[2022-06-20 21:51:46,025] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=tutorial_request, task_id=sample-task, execution_date=20220620T215139, start_date=20220620T215143, end_date=20220620T215146
+[2022-06-20 21:51:46,081] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-20 21:51:46,107] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

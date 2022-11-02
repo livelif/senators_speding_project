@@ -1,0 +1,92 @@
+[2022-11-02 15:24:09,319] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.bronze_senators scheduled__2022-11-01T00:00:00+00:00 [queued]>
+[2022-11-02 15:24:09,330] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.bronze_senators scheduled__2022-11-01T00:00:00+00:00 [queued]>
+[2022-11-02 15:24:09,332] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-02 15:24:09,333] {taskinstance.py:1357} INFO - Starting attempt 5 of 5
+[2022-11-02 15:24:09,334] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-02 15:24:09,352] {taskinstance.py:1377} INFO - Executing <Task(HttpSensor): bronze_senators> on 2022-11-01 00:00:00+00:00
+[2022-11-02 15:24:09,360] {standard_task_runner.py:52} INFO - Started process 796 to run task
+[2022-11-02 15:24:09,367] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_request', 'bronze_senators', 'scheduled__2022-11-01T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmp4u8a3xxo', '--error-file', '/tmp/tmpldxn1ctj']
+[2022-11-02 15:24:09,368] {standard_task_runner.py:80} INFO - Job 7: Subtask bronze_senators
+[2022-11-02 15:24:09,442] {task_command.py:370} INFO - Running <TaskInstance: tutorial_request.bronze_senators scheduled__2022-11-01T00:00:00+00:00 [running]> on host f1a7bb9214cc
+[2022-11-02 15:24:09,509] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_request
+AIRFLOW_CTX_TASK_ID=bronze_senators
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=5
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-01T00:00:00+00:00
+[2022-11-02 15:24:09,517] {http.py:97} INFO - Poking: /extract/senators
+[2022-11-02 15:24:09,533] {base.py:68} INFO - Using connection ID 'request_lakehouse' for task execution.
+[2022-11-02 15:24:09,539] {http.py:129} INFO - Sending 'GET' to url: http://host.docker.internal:6000/extract/senators
+[2022-11-02 15:24:09,550] {http.py:187} WARNING - HTTPConnectionPool(host='host.docker.internal', port=6000): Max retries exceeded with url: /extract/senators (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa00e1810>: Failed to establish a new connection: [Errno 111] Connection refused')) Tenacity will retry to execute the operation
+[2022-11-02 15:24:09,552] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffffa00e1810>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 450, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 786, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal', port=6000): Max retries exceeded with url: /extract/senators (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa00e1810>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 277, in execute
+    poke_return = self.poke(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/sensors/http.py", line 103, in poke
+    extra_options=self.extra_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 130, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 188, in run_and_check
+    raise ex
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 180, in run_and_check
+    response = session.send(prepped_request, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='host.docker.internal', port=6000): Max retries exceeded with url: /extract/senators (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa00e1810>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2022-11-02 15:24:09,569] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=tutorial_request, task_id=bronze_senators, execution_date=20221101T000000, start_date=20221102T152409, end_date=20221102T152409
+[2022-11-02 15:24:09,578] {standard_task_runner.py:97} ERROR - Failed to execute job 7 for task bronze_senators (HTTPConnectionPool(host='host.docker.internal', port=6000): Max retries exceeded with url: /extract/senators (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa00e1810>: Failed to establish a new connection: [Errno 111] Connection refused')); 796)
+[2022-11-02 15:24:09,625] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-11-02 15:24:09,669] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

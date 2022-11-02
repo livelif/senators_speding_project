@@ -1,0 +1,12 @@
+[2022-07-30 17:11:01,779] {processor.py:153} INFO - Started process (PID=74) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-07-30 17:11:01,795] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2022-07-30 17:11:01,798] {logging_mixin.py:115} INFO - [2022-07-30 17:11:01,798] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-07-30 17:11:01,890] {processor.py:651} INFO - DAG(s) dict_keys(['example_xcom_args', 'example_xcom_args_with_operators']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-07-30 17:11:02,077] {logging_mixin.py:115} INFO - [2022-07-30 17:11:02,077] {dag.py:2379} INFO - Sync 2 DAGs
+[2022-07-30 17:11:02,124] {logging_mixin.py:115} INFO - [2022-07-30 17:11:02,124] {dag.py:2931} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2022-07-30 17:11:02,126] {logging_mixin.py:115} INFO - [2022-07-30 17:11:02,126] {dag.py:2931} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2022-07-30 17:11:02,144] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py took 0.367 seconds
+[2022-07-30 17:11:32,482] {processor.py:153} INFO - Started process (PID=127) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-07-30 17:11:32,484] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2022-07-30 17:11:32,487] {logging_mixin.py:115} INFO - [2022-07-30 17:11:32,487] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-07-30 17:11:32,776] {logging_mixin.py:115} INFO - [2022-07-30 17:11:32,776] {process_utils.py:240} INFO - Waiting up to 5 seconds for processes to exit...

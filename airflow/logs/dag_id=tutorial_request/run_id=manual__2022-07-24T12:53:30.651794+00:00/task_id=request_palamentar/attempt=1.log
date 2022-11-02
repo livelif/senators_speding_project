@@ -1,0 +1,28 @@
+[2022-07-24 12:53:31,844] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.request_palamentar manual__2022-07-24T12:53:30.651794+00:00 [queued]>
+[2022-07-24 12:53:31,852] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.request_palamentar manual__2022-07-24T12:53:30.651794+00:00 [queued]>
+[2022-07-24 12:53:31,852] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-24 12:53:31,854] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-07-24 12:53:31,855] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-24 12:53:31,865] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): request_palamentar> on 2022-07-24 12:53:30.651794+00:00
+[2022-07-24 12:53:31,871] {standard_task_runner.py:52} INFO - Started process 1261 to run task
+[2022-07-24 12:53:31,874] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_request', 'request_palamentar', 'manual__2022-07-24T12:53:30.651794+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmp6xt1hyvc', '--error-file', '/tmp/tmpvua6xm_2']
+[2022-07-24 12:53:31,876] {standard_task_runner.py:80} INFO - Job 10: Subtask request_palamentar
+[2022-07-24 12:53:31,925] {task_command.py:370} INFO - Running <TaskInstance: tutorial_request.request_palamentar manual__2022-07-24T12:53:30.651794+00:00 [running]> on host 6e14261407f3
+[2022-07-24 12:53:31,983] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_request
+AIRFLOW_CTX_TASK_ID=request_palamentar
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-24T12:53:30.651794+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-07-24T12:53:30.651794+00:00
+[2022-07-24 12:53:31,986] {http.py:102} INFO - Calling HTTP method
+[2022-07-24 12:53:31,993] {base.py:68} INFO - Using connection ID 'request_lakehouse' for task execution.
+[2022-07-24 12:53:31,996] {http.py:129} INFO - Sending 'GET' to url: http://host.docker.internal:5000/extract/senators
+[2022-07-24 12:53:33,842] {logging_mixin.py:115} INFO - RESPONSE <Response [200]>
+[2022-07-24 12:53:33,845] {hello.py:13} INFO - REQUEST SUCCESS
+[2022-07-24 12:53:33,873] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=tutorial_request, task_id=request_palamentar, execution_date=20220724T125330, start_date=20220724T125331, end_date=20220724T125333
+[2022-07-24 12:53:33,929] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-07-24 12:53:33,952] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

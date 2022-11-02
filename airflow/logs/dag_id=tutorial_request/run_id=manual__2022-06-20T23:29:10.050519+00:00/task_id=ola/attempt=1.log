@@ -1,0 +1,39 @@
+[2022-06-20 23:29:13,069] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.ola manual__2022-06-20T23:29:10.050519+00:00 [queued]>
+[2022-06-20 23:29:13,076] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_request.ola manual__2022-06-20T23:29:10.050519+00:00 [queued]>
+[2022-06-20 23:29:13,077] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 23:29:13,078] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-20 23:29:13,079] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 23:29:13,088] {taskinstance.py:1377} INFO - Executing <Task(Ola): ola> on 2022-06-20 23:29:10.050519+00:00
+[2022-06-20 23:29:13,095] {standard_task_runner.py:52} INFO - Started process 76 to run task
+[2022-06-20 23:29:13,098] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_request', 'ola', 'manual__2022-06-20T23:29:10.050519+00:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmp6xdef5u3', '--error-file', '/tmp/tmpod8gpjzf']
+[2022-06-20 23:29:13,100] {standard_task_runner.py:80} INFO - Job 106: Subtask ola
+[2022-06-20 23:29:13,139] {task_command.py:370} INFO - Running <TaskInstance: tutorial_request.ola manual__2022-06-20T23:29:10.050519+00:00 [running]> on host 253bbd51fe36
+[2022-06-20 23:29:13,181] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_request
+AIRFLOW_CTX_TASK_ID=ola
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T23:29:10.050519+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-20T23:29:10.050519+00:00
+[2022-06-20 23:29:13,301] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/operators/silver/silver.py", line 11, in execute
+    spark = SparkSession.builder.master("local[*]").getOrCreate()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/session.py", line 269, in getOrCreate
+    sc = SparkContext.getOrCreate(sparkConf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/context.py", line 483, in getOrCreate
+    SparkContext(conf=conf or SparkConf())
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/context.py", line 195, in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/context.py", line 417, in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/java_gateway.py", line 106, in launch_gateway
+    raise RuntimeError("Java gateway process exited before sending its port number")
+RuntimeError: Java gateway process exited before sending its port number
+[2022-06-20 23:29:13,321] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=tutorial_request, task_id=ola, execution_date=20220620T232910, start_date=20220620T232913, end_date=20220620T232913
+[2022-06-20 23:29:13,339] {standard_task_runner.py:97} ERROR - Failed to execute job 106 for task ola (Java gateway process exited before sending its port number; 76)
+[2022-06-20 23:29:13,391] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-20 23:29:13,414] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
