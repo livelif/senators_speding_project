@@ -19,7 +19,7 @@ def handle_response(response):
     return False
 
 with DAG(
-    'tutorial_request',
+    'senators_speding',
     # These args will get passed on to each operator
     # You can override them on a per-task basis during operator initialization
     default_args={
